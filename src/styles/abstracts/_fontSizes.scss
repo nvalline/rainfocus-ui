@@ -1,0 +1,18 @@
+/*----- FONT SIZES -----*/
+
+$attendee-card-body: 0.75rem;
+$attendee-card-title: 0.8125rem;
+$attendee-step-title: 0.875rem;
+$attendee-title: clamp(1.13rem, calc(1.08rem + 0.227vw), 1.25rem);
+
+$event-body: clamp(0.75rem, calc(0.659rem + 0.455vw), 1rem);
+$event-edit-btn: clamp(0.75rem, calc(0.705rem + 0.227vw), 0.88rem);
+$event-header: clamp(1.25rem, calc(1.159rem + 0.455vw), 1.5rem);
+$event-title: clamp(1.5rem, calc(0.273rem + 3.636vw), 2rem);
+
+$nav-category: 0.875rem;
+$nav-details: 0.625rem;
+$nav-search: 0.625rem;
+$nav-title: 0.875rem;
+
+$profile-icon: clamp(0.75rem, calc(0.659rem + 0.455vw), 1rem);

@@ -1,0 +1,137 @@
+@use '../styles/abstracts/' as *;
+
+.nav {
+	height: 100vh;
+	padding: 0.75rem 0.5rem;
+	border-right: 1px solid $page-border;
+	background-color: $page-surface;
+
+	@include breakpoint-down('sm') {
+		position: fixed;
+		top: 0;
+		left: $sidebar-width;
+		z-index: 50;
+		opacity: 0;
+		transform: translateX(-100%);
+		transition: transform 0.3s ease, opacity 0.3s ease;
+	}
+
+	&--open {
+		@include breakpoint-down('sm') {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+
+	&__header {
+		width: 100%;
+	}
+
+	&__title {
+		width: 100%;
+		padding: 0.5rem 0.5rem 0.75rem;
+	}
+
+	&__title h2 {
+		font-size: $nav-title;
+		font-weight: 600;
+		color: $text-header;
+	}
+
+	&__details {
+		width: 100%;
+		padding: 0 0.5rem 0.75rem;
+	}
+
+	&__details p {
+		font-size: $nav-details;
+		font-weight: 500;
+		color: $neutral-black;
+	}
+
+	&__search {
+		width: 100%;
+		padding: 0 0.5rem 0.75rem;
+
+		&___container {
+			width: 100%;
+			max-width: 183px;
+			padding: 0.25rem;
+			display: flex;
+			align-items: center;
+			gap: 0.25rem 0;
+			border-radius: 0.25rem;
+			background-color: $neutral-g6;
+		}
+	}
+
+	&__search input[type='search'] {
+		height: 100%;
+		width: 100%;
+		padding: 0.25rem;
+		border: none;
+		background-color: transparent;
+		font-size: $nav-search;
+		font-weight: 600;
+		color: $neutral-g5;
+	}
+
+	&__menu {
+		width: 100%;
+
+		&___btn {
+			width: 100%;
+			padding: 0.5rem 0.75rem;
+			display: flex;
+			align-items: center;
+			gap: 0.75rem;
+			border: none;
+			background-color: transparent;
+			cursor: pointer;
+
+			p {
+				font-size: $nav-category;
+				font-weight: 600;
+				color: $neutral-g4;
+			}
+
+			&--active p {
+				color: $brand-primary-grape;
+			}
+
+			&--active .nav__menu___icon {
+				background-color: $brand-primary-grape;
+			}
+		}
+
+		&___icon {
+			height: 1.5rem;
+			width: 1.5rem;
+			border-radius: 9999px;
+			background-color: $neutral-g4;
+		}
+
+		&___panel {
+			width: 100%;
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.25s ease;
+
+			p {
+				width: 100%;
+				padding: 0.5rem 0.75rem 0.5rem 3rem;
+				font-size: $nav-title;
+				font-weight: 600;
+				color: $neutral-g4;
+			}
+
+			p:hover {
+				color: $brand-primary-grape;
+			}
+
+			&--expanded {
+				max-height: 20rem;
+			}
+		}
+	}
+}

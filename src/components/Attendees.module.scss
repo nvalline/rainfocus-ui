@@ -1,0 +1,136 @@
+@use '../styles/abstracts/' as *;
+
+.attendees {
+	width: 100%;
+	padding-top: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	border-top: 1px solid $page-border;
+
+	&__title {
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+
+		h3 {
+			font-size: $attendee-title;
+			font-weight: 600;
+			color: $text-header;
+		}
+	}
+
+	&__step {
+		margin-bottom: 0.5rem;
+		font-size: $attendee-step-title;
+		font-weight: 400;
+		color: $text-header;
+	}
+
+	&__settings {
+		width: 100%;
+		padding: 1rem 1.5rem;
+		display: flex;
+		align-items: flex-start;
+		gap: 2rem;
+		flex-wrap: wrap;
+		border: 1px solid $page-border;
+		border-radius: 0.25rem;
+
+		&___card {
+			width: 100%;
+			max-width: 221px;
+			padding: 0.5rem;
+
+			h4 {
+				font-size: $attendee-card-title;
+				font-weight: 700;
+				color: $text-header;
+			}
+
+			p {
+				font-size: $attendee-card-body;
+				font-weight: 400;
+				color: $text-body;
+			}
+		}
+	}
+
+	&__workflow {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+		flex-wrap: wrap;
+
+		&___card {
+			width: 100%;
+			max-width: 341.67px;
+			padding: 1.25rem;
+			border: 1px solid $page-border;
+			border-radius: 0.25rem;
+
+			&:last-child {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				gap: 0.25rem;
+			}
+
+			p {
+				font-size: $attendee-card-body;
+				font-weight: 400;
+				color: $text-body;
+			}
+		}
+
+		&___title {
+			margin-bottom: 0.25rem;
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+
+			p {
+				font-size: $attendee-card-title;
+				font-weight: 700;
+				color: $text-header;
+			}
+		}
+	}
+
+	&__portal {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+		flex-wrap: wrap;
+
+		&___card {
+			width: 100%;
+			max-width: 341.67px;
+			padding: 1.25rem;
+			border: 1px solid $page-border;
+			border-radius: 0.25rem;
+
+			p {
+				font-size: $attendee-card-body;
+				font-weight: 400;
+				color: $text-body;
+			}
+		}
+
+		&___title {
+			margin-bottom: 0.25rem;
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+
+			p {
+				font-size: $attendee-card-title;
+				font-weight: 700;
+				color: $text-header;
+			}
+		}
+	}
+}
